@@ -1,0 +1,110 @@
+﻿.memory-game td {
+  border: 1px solid #CCCCCC;
+}
+
+.memory-game .card {
+  cursor: pointer;
+  position: relative;
+  line-height: 0;
+}
+
+.memory-game .back, .memory-game .front  {
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.memory-game .back {
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.memory-game .front {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.memory-game .flipped .front {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.memory-game .flipped .back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.info {
+    position:relative;
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 28px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    color: #444;
+}
+
+.div {
+    position:relative;
+    width: 300px;
+    padding: 25px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    margin: 0 auto;
+}
+
+
+.button {
+    border-radius: 0.5em; /* increased border-radius */
+    text-decoration: none;
+    color: white; /* changed text color to white */
+    padding: 1em 3em; /* increased padding for a larger button */
+    background-color: #329bd8; /* changed background color to a nice blue */
+    text-transform: uppercase; /* made the text uppercase */
+    font-weight: bold; /* gave the text a bold look */
+}
+
+
+
+    .button:hover {
+        background-color: transparent; /* changed the bg-color to transparent */
+        border: 0.15em #329bd8 solid; /* set a border to a blue color */
+        color: #329bd8; /* set a text color to the same color */
+    }
+
+
+
+    .button:active {
+        background-color: transparent;
+        border: 0.15em #5e8ca5 solid;
+        color: #5e8ca5; /* minor text color change in a deeper blue */
+    }
+    .numberCircle {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 160px;
+    padding: 8px;
+    font-size: 32px;
+    line-height: 1em;
+    border: 2px solid #666;
+    position: relative;
+
+}
+.numberCircle .height_fix {
+    margin-top: 100%;
+}
+.numberCircle .content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -16px; /* Note, this must be half the font size */
+}

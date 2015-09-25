@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html ng-app="colourMemoryModel">
+<head>
+    <meta charset="utf-8">
+    <title>Angular Demo</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+        h2 {
+            margin: 1em 0 0.5em 0;
+            color: #343434;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 40px;
+            font-family: 'Orienta', sans-serif;
+        }
+    </style>
+    <header class="text-center">
+        <p class="divide-text">
+            <img src="../images/logo.png">
+        </p>
+    </header>
+</head>
+<body ng-controller="ExampleCtrl">
+    <h1></h1>
+
+    <memory-game columns="4"
+        lines="4"
+        cards-src="cardsSrc"
+        card-width="92"
+        card-height="92">
+    </memory-game>
+
+    <section>
+        <h2>Score Card</h2>
+       
+            <div class="info">
+                <p>{{count}}</p>
+                <p>{{message}}</p>
+            </div>
+            
+        <button class="button" ng-click="restartBtn()">New Game</button>
+    </section>
+
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/app.js"></script>
+    <script src="../lib/CardModel.js"></script>
+    <link href="../Style/memory-game.css" rel="stylesheet" />
+</body>
+</html>
